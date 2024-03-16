@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "module-found"
+version = "0.1.0"
+description = ""
+authors = ["Liad Oz <liadozil@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "module_found" },
+    { include = "module_found.pth" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+openai = "^1.13.3"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.0"
+debugpy = "^1.8.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = "missing-module-docstring,missing-function-docstring,missing-class-docstring"
