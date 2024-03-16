@@ -1,13 +1,22 @@
 [tool.poetry]
 name = "module-found"
 version = "0.1.0"
-description = ""
+description = "Automatically create modules instead of failing with ModuleNotFound"
 authors = ["Liad Oz <liadozil@gmail.com>"]
 readme = "README.md"
 packages = [
     { include = "module_found" },
     { include = "module_found.pth" },
 ]
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+]
+repository = "https://github.com/LiadOz/module-found"
 
 [tool.poetry.dependencies]
 python = "^3.8"
