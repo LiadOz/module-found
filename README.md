@@ -16,7 +16,7 @@ So, to all you smelly nerds out there, listen up: if you want to stop annoying p
 pip install module-found
 ```
 
-## setup
+## Setup
 By default, this package is supposed to be smart enough to handle shit on its own. It'll look for an environment variable called MODULE_FOUND_KEY and use that as the OPENAI API key. But guess what? Python's too dumb to figure that out, so you might have to hold its hand a bit.
 ```bash
 export MODULE_FOUND_KEY=your_openai_api_key
@@ -34,3 +34,14 @@ setup(your_api_key)
 But seriously, who the hell wants to do extra work? Python should just know what the hell to do, am I right? It's like dealing with a goddamn toddler who can't tie their own shoelaces.
 
 So, do yourself a favor and set up that stupid environment variable. Or don't, and suffer through calling the setup function like a chump. Your call.
+
+## Usage
+Listen up, you bunch of nerds! I'm about to show you how to work some goddamn magic:
+
+```python
+from cs_interview_questions import pascal_triangle
+
+pascal_triangle(10)
+```
+
+You see this? We just imported a package out of thin air, thanks to module-found! This cs_interview_questions package? It wasn't even on the radar until we brought it into existence. And then, like a boss, we fire up the pascal_triangle function, giving it the old 10 treatment. It's like coding on steroids, without all the brain-busting gibberish. So grab your popcorn, 'cause we're about to blow your mind!
