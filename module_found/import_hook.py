@@ -1,7 +1,6 @@
 import os
 import sys
 import importlib
-from typing import Optional
 from .lazy_object import LazyModule, ctx
 
 
@@ -29,16 +28,18 @@ class AiLoader():
         ...
 
 
-def setup(api_key: Optional[str]=None):
+def setup(api_key: str = '', model: str = ''):
     if sys.argv[0].endswith('pip'):
-        # Some users have reported that they fail to use pip after the package is installed.
+        # Some users have reported that they fail to use pip after the module-found is installed.
         # I don't understand why would someone use pip to install additional packages
         # if module-found actually contains all packages that exist and those that don't exist.
         # But to please them I added this return.
         return
 
+    if not model:
+        model = os.getenv('MODULE_FOUND_MODEL') or 'gpt-4o-mini'
     if not api_key:
         api_key = os.getenv('MODULE_FOUND_KEY')
     if api_key:
-        ctx.set_api_key(api_key)
+        ctx.set_api_params(api_key, model)
         sys.meta_path.append(AiFinder(api_key))
