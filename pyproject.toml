@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "module-found"
-version = "0.2.0"
+version = "0.2.1.dev1"
 description = "Automatically create modules instead of failing with ModuleNotFound"
 authors = ["Liad Oz <liadozil@gmail.com>"]
 readme = "README.md"
